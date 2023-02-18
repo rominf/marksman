@@ -5,12 +5,15 @@ description: |
   favourite editor.
 icon: assets/readme/logo.png
 license: MIT
+issues: https://github.com/artempyanykh/marksman/issues
+source-code: https://github.com/artempyanykh/marksman
 base: core22
 adopt-info: marksman
 grade: stable
 confinement: strict
 architectures:
   - build-on: amd64
+
 
 apps:
   marksman:
