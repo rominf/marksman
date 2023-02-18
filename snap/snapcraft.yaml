@@ -9,6 +9,8 @@ base: core22
 adopt-info: marksman
 grade: stable
 confinement: strict
+architectures:
+  - build-on: amd64
 
 apps:
   marksman:
