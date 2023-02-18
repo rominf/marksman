@@ -1,0 +1,33 @@
+name: marksman-rominf
+summary: LSP server for Markdown
+description: |
+  Write Markdown with code assist and intelligence in the comfort of your
+  favourite editor.
+icon: assets/readme/logo.png
+license: MIT
+base: core22
+adopt-info: marksman
+grade: stable
+confinement: strict
+
+apps:
+  marksman:
+    command: ./marksman
+    plugs:
+      - home
+      - network-bind
+
+parts:
+  marksman:
+    plugin: dotnet
+    build-packages:
+      - dotnet-sdk-6.0
+      - make
+    stage-packages:
+      - libicu70
+    source: .
+    override-build: |
+      craftctl default
+      craftctl set version="$(git describe --tags)"
+      make publishTo DEST=$SNAPCRAFT_PART_INSTALL
+      chmod 0755 $SNAPCRAFT_PART_INSTALL/marksman
