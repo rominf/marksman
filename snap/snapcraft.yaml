@@ -4,7 +4,7 @@ description: |
   Write Markdown with code assist and intelligence in the comfort of your
   favourite editor.
 icon: assets/readme/logo.png
-license: MIT
+license: MIT License
 issues: https://github.com/artempyanykh/marksman/issues
 source-code: https://github.com/artempyanykh/marksman
 base: core22
